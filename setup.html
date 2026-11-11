@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setup &mdash; NaviMate</title>
+<meta name="description" content="Step-by-step setup for the NaviMate Controller on iPhone and Android, with shortcut downloads for each navigation app.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .lang { display: flex; gap: 8px; margin: 8px 0 20px; }
+  .lang a { border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; color: var(--text-dim); }
+  .lang a.on { border-color: var(--accent); color: var(--accent); }
+  ol.steps > li, ul.steps > li { margin: 8px 0; }
+  .menu { font-weight: 600; color: var(--text); }
+  .dl { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 18px; }
+  .dl a { display: inline-block; background: var(--accent); color: #111; font-weight: 700; border-radius: 10px; padding: 10px 16px; }
+  .dl a.alt { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+  .note { color: var(--text-dim); font-size: 14px; }
+  .why { border-left: 3px solid var(--accent-dim); padding: 4px 12px; color: var(--text-dim); font-size: 15px; margin: 10px 0; }
+  .ok { border: 1px solid var(--border); background: var(--bg-panel); border-radius: 10px; padding: 8px 12px; font-size: 15px; margin: 10px 0; }
+  .toc { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 12px; padding: 12px 18px; margin-bottom: 28px; }
+  .toc ol { margin: 6px 0; padding-left: 20px; }
+  table.nav { border-collapse: collapse; width: 100%; margin: 8px 0 14px; font-size: 15px; }
+  table.nav td, table.nav th { border-bottom: 1px solid var(--border); padding: 8px 6px; text-align: left; vertical-align: middle; }
+  table.nav a { display: inline-block; border: 1px solid var(--accent); border-radius: 8px; padding: 4px 10px; margin: 2px 4px 2px 0; }
+  table.ctl { border-collapse: collapse; width: 100%; font-size: 15px; margin: 8px 0; }
+  table.ctl td { border-bottom: 1px solid var(--border); padding: 6px; vertical-align: top; }
+  table.ctl td:first-child { white-space: nowrap; font-weight: 600; color: var(--text); padding-right: 14px; }
+  section { margin-bottom: 40px; }
+  h2 { scroll-margin-top: 12px; }
+  [lang="ko"] { display: none; }
+  body.ko [lang="ko"] { display: block; }
+  body.ko [lang="en"] { display: none; }
+  body.ko span[lang="ko"], body.ko a[lang="ko"] { display: inline; }
+  body.ko table[lang="ko"] { display: table; }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="nav-wrap">
+    <div class="brand"><span class="mark">&#9679;</span> Luke Technology LLC</div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="navimate.html">NaviMate</a>
+      <a href="setup.html" class="active">Setup</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1><span lang="en">NaviMate Setup Guide</span><span lang="ko">NaviMate 설정 안내</span></h1>
+  <div class="lang"><a href="#" id="en-btn" class="on">English</a><a href="#" id="ko-btn">한국어</a></div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div lang="en">
+  <p class="tagline">Follow these steps once, in order, while parked. It takes about 15 minutes. The NaviMate app has the same steps in <span class="menu">Setup Guide</span> and checks off what it can.</p>
+
+  <div class="toc">
+    <strong>iPhone</strong>
+    <ol>
+      <li><a href="#en-1">Install the NaviMate app</a></li>
+      <li><a href="#en-2">Power NaviMate and pair it</a></li>
+      <li><a href="#en-3">Turn on Zoom</a></li>
+      <li><a href="#en-4">Siri input test</a></li>
+      <li><a href="#en-5">Siri language</a></li>
+      <li><a href="#en-6">Choose your navigation app</a></li>
+      <li><a href="#en-7">Shortcuts and automations</a> (the longest step)</li>
+      <li><a href="#en-8">Volume knob, car Bluetooth</a></li>
+      <li><a href="#en-9">Set up the buttons</a></li>
+      <li><a href="#en-10">Try it — what each control does</a></li>
+      <li><a href="#en-11">If something doesn't work</a></li>
+    </ol>
+    <a href="#en-android">Android</a> is simpler — see the end of this page.
+  </div>
+
+  <section id="en-1">
+    <h2>1. Install the NaviMate app (beta)</h2>
+    <ol class="steps">
+      <li>On your iPhone, open the <span class="menu">App Store</span>, search for <span class="menu">TestFlight</span> (by Apple) and install it.</li>
+      <li>Come back to this page on the iPhone and tap the button below.</li>
+      <li>TestFlight opens. Tap <span class="menu">Accept</span>, then <span class="menu">Install</span>.</li>
+      <li>NaviMate appears on your Home Screen. Leave TestFlight installed — updates come through it.</li>
+    </ol>
+    <div class="dl"><a href="https://testflight.apple.com/join/HxHCGKgx">NaviMate for iPhone (TestFlight)</a></div>
+    <p class="note">No code is needed. If TestFlight asks for a "redeem code", go back and tap the button above instead.</p>
+  </section>
+
+  <section id="en-2">
+    <h2>2. Power NaviMate and pair it</h2>
+    <ol class="steps">
+      <li>Put NaviMate in a cup holder where your right hand rests naturally, and plug its cable into your car's USB port.</li>
+      <li>On the iPhone: <span class="menu">Settings</span> &gt; <span class="menu">Bluetooth</span>. Under <span class="menu">Other Devices</span>, tap <span class="menu">NaviMate-xxxx</span> (the name on the label under your NaviMate) &gt; <span class="menu">Pair</span>.</li>
+      <li>Open the <span class="menu">NaviMate</span> app. The first screen is the beta notice — read it and tap OK.</li>
+      <li>On the main screen, tap <span class="menu">Setup Guide</span>. Step 1 <span class="menu">Pair NaviMate</span> turns green within a few seconds.</li>
+    </ol>
+    <div class="ok">✓ Done when: the dot on the NaviMate main screen is green and it says <span class="menu">Connected</span>.</div>
+    <p class="note">If step 1 stays grey: tap <span class="menu">Check again</span>. Still grey? Close the NaviMate app (swipe it away) and open it again. NaviMate must show "Connected" under Settings &gt; Bluetooth.</p>
+  </section>
+
+  <section id="en-3">
+    <h2>3. Turn on Zoom</h2>
+    <ol class="steps">
+      <li><span class="menu">Settings</span> &gt; <span class="menu">Accessibility</span> &gt; <span class="menu">Zoom</span> &gt; turn <span class="menu">Zoom</span> on.</li>
+      <li>Go back to the NaviMate Setup Guide and turn on <span class="menu">Done</span> for step 2.</li>
+    </ol>
+    <div class="why">Why: the joystick and knob move the map like a finger on the screen. iPhone accepts this kind of input from an accessory only while Zoom is on. Zoom does not magnify your screen by itself.</div>
+    <p class="note">If the screen ever gets magnified, double-tap it with three fingers. After restarting the iPhone, if the map stops responding to the joystick, double-tap the screen with three fingers once.</p>
+  </section>
+
+  <section id="en-4">
+    <h2>4. Siri input test</h2>
+    <div class="why">Why: the call, text and message buttons work by typing into Siri for you — no talking. iPhones open Siri's typing box in different ways (new Siri with Apple Intelligence, Siri Classic, or "Type to Siri"), and an app can't tell which one your iPhone uses. So NaviMate tries the ways one by one, and remembers the one that works. You do this only once.</div>
+    <ol class="steps">
+      <li>Older iPhones (without Apple Intelligence) only: <span class="menu">Settings</span> &gt; <span class="menu">Accessibility</span> &gt; <span class="menu">Siri</span> &gt; turn on <span class="menu">Type to Siri</span>. The Setup Guide tells you if you need this.</li>
+      <li>In the Setup Guide step 3, tap <span class="menu">Test</span>. NaviMate opens Siri and types "What time is it".</li>
+      <li>If Siri shows the time: tap <span class="menu">Siri answered</span>. Done.</li>
+      <li>If nothing appears: tap <span class="menu">Nothing happened — try another way</span>, then <span class="menu">Test again</span>. This is normal, not an error — some iPhones need the second way.</li>
+      <li>Tap an empty spot on the screen to close Siri or Search.</li>
+    </ol>
+  </section>
+
+  <section id="en-5">
+    <h2>5. Siri language</h2>
+    <ol class="steps">
+      <li>Check <span class="menu">Settings</span> &gt; <span class="menu">Siri</span> &gt; <span class="menu">Language</span>.</li>
+      <li>In the Setup Guide step 4, choose the same language and turn on <span class="menu">Done</span>.</li>
+    </ol>
+    <div class="why">Why: NaviMate types sentences such as "Call Mom on speaker" into Siri, so it has to write in Siri's language. Only the Siri language matters — your iPhone can be in another language.</div>
+  </section>
+
+  <section id="en-6">
+    <h2>6. Choose your navigation app</h2>
+    <p>On the NaviMate main screen, tap the navigation app name in the device card and pick the one you use: Google Maps, Waze, KakaoNavi, NAVER Map or TMAP.</p>
+  </section>
+
+  <section id="en-7">
+    <h2>7. Shortcuts and automations</h2>
+    <div class="why">Why: an iPhone doesn't tell other apps which app is on the screen. Two Shortcuts automations tell NaviMate "the navigation app just opened" and "it just closed", so the joystick and knob move the map only inside your navigation app — never in your messages or other apps. Apple doesn't allow automations to be shared, so you make them yourself once. Only the shortcuts can be downloaded.</div>
+
+    <h3>A. Add the two shortcuts for your navigation app</h3>
+    <p>Open this page on your iPhone, tap <strong>both</strong> buttons for your navigation app. For each: tap <span class="menu">Download</span> if Safari asks → open it (Safari's download arrow, or the Files app &gt; Downloads) → <span class="menu">Add Shortcut</span>. The NaviMate app's Setup Guide has the same two buttons (there: tap → choose <span class="menu">Shortcuts</span> in the share menu).</p>
+    <table class="nav">
+      <tr><th>Navigation app</th><th>Download both</th></tr>
+      <tr><td>Google Maps</td><td><a href="shortcuts/NaviMate%20On%20(Google%20Maps).shortcut">NaviMate On (Google Maps)</a><a href="shortcuts/NaviMate%20Off%20(Google%20Maps).shortcut">NaviMate Off (Google Maps)</a></td></tr>
+      <tr><td>Waze</td><td><a href="shortcuts/NaviMate%20On%20(Waze).shortcut">NaviMate On (Waze)</a><a href="shortcuts/NaviMate%20Off%20(Waze).shortcut">NaviMate Off (Waze)</a></td></tr>
+      <tr><td>KakaoNavi</td><td><a href="shortcuts/NaviMate%20On%20(KakaoNavi).shortcut">NaviMate On (KakaoNavi)</a><a href="shortcuts/NaviMate%20Off%20(KakaoNavi).shortcut">NaviMate Off (KakaoNavi)</a></td></tr>
+      <tr><td>NAVER Map</td><td><a href="shortcuts/NaviMate%20On%20(NAVER%20Map).shortcut">NaviMate On (NAVER Map)</a><a href="shortcuts/NaviMate%20Off%20(NAVER%20Map).shortcut">NaviMate Off (NAVER Map)</a></td></tr>
+      <tr><td>TMAP</td><td><a href="shortcuts/NaviMate%20On%20(TMAP).shortcut">NaviMate On (TMAP)</a><a href="shortcuts/NaviMate%20Off%20(TMAP).shortcut">NaviMate Off (TMAP)</a></td></tr>
+    </table>
+    <p class="note">Adding the shortcuts does nothing by itself — the automations in B are what run them.</p>
+
+    <h3>B. Make automation 1 — when the navigation app opens</h3>
+    <ol class="steps">
+      <li>Open the <span class="menu">Shortcuts</span> app. Tap <span class="menu">Automation</span> at the bottom.</li>
+      <li>Tap <span class="menu">+</span> at the top right. (If you have no automations yet, tap <span class="menu">New Automation</span>.)</li>
+      <li>Scroll down the list and tap <span class="menu">App</span>.</li>
+      <li>Tap <span class="menu">Choose</span> next to App, select your navigation app (e.g. Google Maps), tap <span class="menu">Done</span>.</li>
+      <li>Make sure only <span class="menu">Is Opened</span> is checked (uncheck <span class="menu">Is Closed</span>).</li>
+      <li>Choose <span class="menu">Run Immediately</span> (not "Run After Confirmation"). Tap <span class="menu">Next</span>.</li>
+      <li>In the list, tap <span class="menu">NaviMate On (your navigation app)</span>. The automation is saved.</li>
+    </ol>
+
+    <h3>C. Make automation 2 — when the navigation app closes</h3>
+    <ol class="steps">
+      <li>Repeat B steps 1–4.</li>
+      <li>This time check only <span class="menu">Is Closed</span>.</li>
+      <li><span class="menu">Run Immediately</span> &gt; <span class="menu">Next</span> &gt; tap <span class="menu">NaviMate Off (your navigation app)</span>.</li>
+    </ol>
+    <p class="note">The Automation list now shows two lines, "When Google Maps is opened" and "When Google Maps is closed" (with your app's name). If you can't find the NaviMate shortcuts in the list, use <span class="menu">New Blank Automation</span> &gt; <span class="menu">Add Action</span> &gt; search <span class="menu">NaviMate</span> &gt; <span class="menu">Activate NaviMate</span> (or <span class="menu">Deactivate NaviMate</span>).</p>
+
+    <h3>D. Check</h3>
+    <ol class="steps">
+      <li>Open your navigation app, then switch back to the NaviMate app.</li>
+      <li>Setup Guide step 5 shows ✓ for both <span class="menu">On signal</span> and <span class="menu">Off signal</span>.</li>
+    </ol>
+    <p class="note">Use more than one navigation app? Choose the other app on the main screen and repeat A–D for it.</p>
+  </section>
+
+  <section id="en-8">
+    <h2>8. Volume knob and car Bluetooth (recommended)</h2>
+    <h3>Volume knob</h3>
+    <p><span class="menu">Settings</span> &gt; <span class="menu">Sounds &amp; Haptics</span> &gt; turn off <span class="menu">Change with Buttons</span>. Then the knob changes music and navigation voice volume instead of the ringer.</p>
+    <h3>If your iPhone connects to the car's Bluetooth audio</h3>
+    <p><span class="menu">Settings</span> &gt; <span class="menu">Bluetooth</span> &gt; tap ⓘ next to your car &gt; <span class="menu">Device Type</span> &gt; <span class="menu">Speaker</span>.</p>
+    <div class="why">Why: with "Car Stereo", Siri answers by voice instead of opening its typing box, so the buttons can't type commands. If calls then play on the iPhone instead of the car speakers: Settings &gt; Accessibility &gt; Touch &gt; Call Audio Routing &gt; Bluetooth Headset.</div>
+  </section>
+
+  <section id="en-9">
+    <h2>9. Set up the buttons</h2>
+    <p>NaviMate has 6 buttons. Each can do 3 things: press once (<em>Short</em>), press twice quickly (<em>Double</em>), and press and hold (<em>Long</em>).</p>
+    <ol class="steps">
+      <li>On the main screen, tap <span class="menu">Buttons at a Glance</span>. You see all 6 buttons laid out like the real device (left column 1-2-3, right column 4-5-6).</li>
+      <li>Tap a button's box to change it. Choose Short, Double or Long, then pick a function.</li>
+      <li>For <span class="menu">Make a call</span> and <span class="menu">Send a text</span>, choose the contact (and write the message).</li>
+      <li>Scroll down on Buttons at a Glance to see every function with a one-line description.</li>
+    </ol>
+    <p class="note">Default layout: Button 1 short = answer a call, long = end a call. Button 2 = decline. Button 6 short = play/pause, double = next song, long = previous song.</p>
+    <p><strong>Identify song (optional):</strong> add the shortcut that matches your Siri language, then assign <span class="menu">Identify song</span> to a button.</p>
+    <div class="dl">
+      <a href="https://www.icloud.com/shortcuts/933fb0b65cfb422b8b7bf9ecf3ba07fb" class="alt">Song Title (English Siri)</a>
+      <a href="https://www.icloud.com/shortcuts/c365f68e55f141cebb25a3d58d1bf278" class="alt">노래 제목 (Korean Siri)</a>
+    </div>
+  </section>
+
+  <section id="en-10">
+    <h2>10. Try it — what each control does</h2>
+    <p>Open your navigation app and start a route.</p>
+    <table class="ctl">
+      <tr><td>Joystick — tilt</td><td>Moves the map, to look ahead or around.</td></tr>
+      <tr><td>Joystick — click</td><td>Whole route (overview) ↔ back to your position.</td></tr>
+      <tr><td>Joystick — hold</td><td>Back to your navigation app from anywhere.</td></tr>
+      <tr><td>Knob — turn</td><td>Zoom the map in/out. Outside the navigation app, the knob is volume.</td></tr>
+      <tr><td>Knob — press</td><td>NaviMate says the current mode (zoom, volume, brightness). Press again within 5 seconds to switch to the next mode.</td></tr>
+      <tr><td>Knob — hold</td><td>On the map: shows Buttons at a Glance. Hold again to go back to the map.</td></tr>
+      <tr><td>Buttons 1–6</td><td>Whatever you set in step 9 — calls, texts, reading messages, music, and more. One press, no talking, no looking at the screen.</td></tr>
+    </table>
+  </section>
+
+  <section id="en-11">
+    <h2>11. If something doesn't work</h2>
+    <ul class="steps">
+      <li><strong>The joystick doesn't move the map.</strong> Is the navigation app in front? Check Setup Guide step 5 (both ✓). After an iPhone restart, double-tap the screen with three fingers once (Zoom).</li>
+      <li><strong>Nothing responds at all.</strong> Open the NaviMate app — the main screen should say Connected. If not, check Settings &gt; Bluetooth, then reopen the app.</li>
+      <li><strong>Call/text buttons do nothing or Siri talks instead of typing.</strong> Run the Siri input test again (step 4). Set your car's Bluetooth Device Type to Speaker (step 8).</li>
+      <li><strong>The screen is magnified.</strong> Double-tap with three fingers.</li>
+      <li>In the app: <span class="menu">Ask NaviMate</span> (AI helper) and <span class="menu">Feedback</span>. Or email admin@luke-technology.com.</li>
+    </ul>
+  </section>
+
+  <section id="en-android">
+    <h2>Android</h2>
+    <p>No shortcuts or automations are needed — NaviMate turns on by itself when your navigation app is in front.</p>
+    <ol class="steps">
+      <li>Send the Gmail address you use on your phone to <a href="mailto:admin@luke-technology.com?subject=NaviMate%20beta%20(Android)">admin@luke-technology.com</a> (or to the person who gave you NaviMate). We add you to the beta list.</li>
+      <li>After we confirm, open the link below on your phone → <span class="menu">Become a tester</span> → <span class="menu">Download it on Google Play</span>.</li>
+      <li>Open the NaviMate app and follow its Setup Guide: allow Bluetooth → pair NaviMate → turn on the NaviMate accessibility service → allow phone, messages and notification access → choose your navigation app.</li>
+    </ol>
+    <div class="dl"><a href="https://play.google.com/apps/internaltest/4701258503670499070">NaviMate for Android (Google Play beta)</a></div>
+  </section>
+  </div>
+
+  <!-- ===================== 한국어 ===================== -->
+  <div lang="ko">
+  <p class="tagline">정차한 상태에서 순서대로 한 번만 하면 됩니다. 약 15분 걸립니다. NaviMate 앱의 <span class="menu">설정 안내</span>에도 같은 단계가 있고, 앱이 확인할 수 있는 것은 자동으로 체크됩니다.</p>
+
+  <div class="toc">
+    <strong>iPhone</strong>
+    <ol>
+      <li><a href="#ko-1">NaviMate 앱 설치</a></li>
+      <li><a href="#ko-2">전원 연결과 페어링</a></li>
+      <li><a href="#ko-3">확대/축소 켜기</a></li>
+      <li><a href="#ko-4">Siri 입력 시험</a></li>
+      <li><a href="#ko-5">Siri 언어</a></li>
+      <li><a href="#ko-6">내비 앱 고르기</a></li>
+      <li><a href="#ko-7">단축어와 자동화</a> (가장 긴 단계)</li>
+      <li><a href="#ko-8">볼륨 노브, 차 블루투스</a></li>
+      <li><a href="#ko-9">버튼 설정</a></li>
+      <li><a href="#ko-10">써 보기 — 조작별 기능</a></li>
+      <li><a href="#ko-11">안 될 때</a></li>
+    </ol>
+    <a href="#ko-android">안드로이드</a>는 더 간단합니다 — 맨 아래를 보세요.
+  </div>
+
+  <section id="ko-1">
+    <h2>1. NaviMate 앱 설치 (베타)</h2>
+    <ol class="steps">
+      <li>iPhone에서 <span class="menu">App Store</span>를 열고 <span class="menu">TestFlight</span>(Apple)를 검색해 설치합니다.</li>
+      <li>iPhone에서 이 페이지로 돌아와 아래 버튼을 누릅니다.</li>
+      <li>TestFlight가 열리면 <span class="menu">수락</span> → <span class="menu">설치</span>.</li>
+      <li>홈 화면에 NaviMate가 생깁니다. 업데이트가 TestFlight로 오니 TestFlight는 지우지 마세요.</li>
+    </ol>
+    <div class="dl"><a href="https://testflight.apple.com/join/HxHCGKgx">NaviMate iPhone 앱 (TestFlight)</a></div>
+    <p class="note">코드는 필요 없습니다. TestFlight가 "코드 입력"을 물으면 뒤로 가서 위 버튼을 누르세요.</p>
+  </section>
+
+  <section id="ko-2">
+    <h2>2. 전원 연결과 페어링</h2>
+    <ol class="steps">
+      <li>오른손이 자연스럽게 닿는 컵홀더에 NaviMate를 넣고, 케이블을 차의 USB 포트에 꽂습니다.</li>
+      <li>iPhone <span class="menu">설정</span> &gt; <span class="menu">Bluetooth</span> &gt; <span class="menu">기타 기기</span>에서 <span class="menu">NaviMate-xxxx</span>(NaviMate 바닥 라벨의 이름) &gt; <span class="menu">페어링</span>.</li>
+      <li><span class="menu">NaviMate</span> 앱을 엽니다. 첫 화면은 베타 안내입니다 — 읽고 확인을 누르세요.</li>
+      <li>메인 화면에서 <span class="menu">설정 안내</span>를 누르면, 1단계 <span class="menu">NaviMate 페어링</span>이 몇 초 안에 초록색이 됩니다.</li>
+    </ol>
+    <div class="ok">✓ 완료 표시: NaviMate 메인 화면의 점이 초록색이고 <span class="menu">연결됨</span>으로 나옵니다.</div>
+    <p class="note">1단계가 회색이면 <span class="menu">다시 확인</span>을 누르세요. 그래도 회색이면 NaviMate 앱을 위로 밀어 닫았다가 다시 여세요. 설정 &gt; Bluetooth에서 NaviMate가 "연결됨"이어야 합니다.</p>
+  </section>
+
+  <section id="ko-3">
+    <h2>3. 확대/축소 켜기</h2>
+    <ol class="steps">
+      <li><span class="menu">설정</span> &gt; <span class="menu">손쉬운 사용</span> &gt; <span class="menu">확대/축소</span> &gt; <span class="menu">확대/축소</span> 켬.</li>
+      <li>NaviMate 설정 안내로 돌아와 2단계 <span class="menu">완료</span>를 켭니다.</li>
+    </ol>
+    <div class="why">왜 하나요: 조이스틱과 노브는 손가락처럼 지도를 움직입니다. iPhone은 확대/축소가 켜져 있을 때만 액세서리의 이런 입력을 받습니다. 켜기만 해서는 화면이 확대되지 않습니다.</div>
+    <p class="note">화면이 확대되면 세 손가락으로 두 번 탭하세요. iPhone을 재시동한 뒤 조이스틱이 지도를 안 움직이면 세 손가락으로 화면을 한 번 두 번 탭하세요.</p>
+  </section>
+
+  <section id="ko-4">
+    <h2>4. Siri 입력 시험</h2>
+    <div class="why">왜 하나요: 전화·문자·메시지 버튼은 말 대신 NaviMate가 Siri에 글자를 입력해 동작합니다. iPhone마다 Siri 입력창을 여는 방법이 다르고(Apple Intelligence 새 Siri, Siri Classic, "Siri에 입력"), 앱은 내 iPhone이 어느 방법인지 알 수 없습니다. 그래서 NaviMate가 방법을 하나씩 시험하고 되는 방법을 기억합니다. 처음 한 번만 하면 됩니다.</div>
+    <ol class="steps">
+      <li>예전 iPhone(Apple Intelligence 없음)만: <span class="menu">설정</span> &gt; <span class="menu">손쉬운 사용</span> &gt; <span class="menu">Siri</span> &gt; <span class="menu">Siri에 입력</span> 켬. 필요하면 설정 안내가 알려 줍니다.</li>
+      <li>설정 안내 3단계에서 <span class="menu">시험</span>을 누르면 NaviMate가 Siri를 열고 "지금 몇 시야"를 입력합니다.</li>
+      <li>Siri가 시간을 보여 주면 <span class="menu">Siri가 답함</span>을 누르면 끝.</li>
+      <li>아무것도 안 나타나면 <span class="menu">반응 없음 — 다른 방법으로 시험</span> → <span class="menu">다시 시험</span>. 고장이 아니라 정상 과정입니다 — 두 번째 방법이 맞는 iPhone이 있습니다.</li>
+      <li>Siri나 검색 창은 화면 빈 곳을 눌러 닫습니다.</li>
+    </ol>
+  </section>
+
+  <section id="ko-5">
+    <h2>5. Siri 언어</h2>
+    <ol class="steps">
+      <li><span class="menu">설정</span> &gt; <span class="menu">Siri</span> &gt; <span class="menu">언어</span>를 확인합니다.</li>
+      <li>설정 안내 4단계에서 같은 언어를 고르고 <span class="menu">완료</span>를 켭니다.</li>
+    </ol>
+    <div class="why">왜 하나요: NaviMate가 "엄마에게 스피커폰으로 전화 걸어" 같은 문장을 Siri에 입력하므로 Siri 언어로 써야 합니다. Siri 언어만 맞으면 되고, iPhone 언어는 달라도 됩니다.</div>
+  </section>
+
+  <section id="ko-6">
+    <h2>6. 내비 앱 고르기</h2>
+    <p>NaviMate 메인 화면의 기기 카드에서 내비 앱 이름을 누르고 쓰는 앱을 고릅니다: 구글맵, Waze, 카카오내비, 네이버 지도, TMAP.</p>
+  </section>
+
+  <section id="ko-7">
+    <h2>7. 단축어와 자동화</h2>
+    <div class="why">왜 하나요: iPhone은 지금 어떤 앱이 화면에 있는지 다른 앱에 알려 주지 않습니다. 단축어 자동화 두 개가 "내비 앱이 열렸다", "닫혔다"를 NaviMate에 알려 주어, 조이스틱과 노브가 내비 앱 안에서만 지도를 움직이고 문자나 다른 앱에서는 움직이지 않습니다. Apple은 자동화를 공유할 수 없게 막아 두어서 한 번 직접 만들어야 합니다. 내려받을 수 있는 것은 단축어뿐입니다.</div>
+
+    <h3>A. 쓰는 내비 앱의 단축어 두 개 추가</h3>
+    <p>iPhone에서 이 페이지를 열고 내비 앱 줄의 버튼 <strong>두 개</strong>를 모두 누르세요. 각각 Safari가 물으면 <span class="menu">다운로드</span> → 열기(Safari의 다운로드 화살표, 또는 파일 앱 &gt; 다운로드) → <span class="menu">단축어 추가</span>. NaviMate 앱의 설정 안내에도 같은 버튼이 있습니다(앱에서는 누른 뒤 공유 메뉴에서 <span class="menu">단축어</span> 선택).</p>
+    <table class="nav" lang="ko">
+      <tr><th>내비 앱</th><th>두 개 모두 받기</th></tr>
+      <tr><td>구글맵</td><td><a href="shortcuts/NaviMate%20On%20(Google%20Maps).shortcut">NaviMate On (Google Maps)</a><a href="shortcuts/NaviMate%20Off%20(Google%20Maps).shortcut">NaviMate Off (Google Maps)</a></td></tr>
+      <tr><td>Waze</td><td><a href="shortcuts/NaviMate%20On%20(Waze).shortcut">NaviMate On (Waze)</a><a href="shortcuts/NaviMate%20Off%20(Waze).shortcut">NaviMate Off (Waze)</a></td></tr>
+      <tr><td>카카오내비</td><td><a href="shortcuts/NaviMate%20On%20(KakaoNavi).shortcut">NaviMate On (KakaoNavi)</a><a href="shortcuts/NaviMate%20Off%20(KakaoNavi).shortcut">NaviMate Off (KakaoNavi)</a></td></tr>
+      <tr><td>네이버 지도</td><td><a href="shortcuts/NaviMate%20On%20(NAVER%20Map).shortcut">NaviMate On (NAVER Map)</a><a href="shortcuts/NaviMate%20Off%20(NAVER%20Map).shortcut">NaviMate Off (NAVER Map)</a></td></tr>
+      <tr><td>TMAP</td><td><a href="shortcuts/NaviMate%20On%20(TMAP).shortcut">NaviMate On (TMAP)</a><a href="shortcuts/NaviMate%20Off%20(TMAP).shortcut">NaviMate Off (TMAP)</a></td></tr>
+    </table>
+    <p class="note">단축어를 추가하는 것만으로는 아무 일도 일어나지 않습니다 — 아래 B·C의 자동화가 단축어를 실행합니다.</p>
+
+    <h3>B. 자동화 1 — 내비 앱이 열릴 때</h3>
+    <ol class="steps">
+      <li><span class="menu">단축어</span> 앱을 열고 아래 <span class="menu">자동화</span>를 누릅니다.</li>
+      <li>오른쪽 위 <span class="menu">+</span>. (자동화가 하나도 없으면 <span class="menu">새로운 자동화</span>.)</li>
+      <li>목록을 내려 <span class="menu">앱</span>을 누릅니다.</li>
+      <li>앱 옆 <span class="menu">선택</span> → 내비 앱(예: Google 지도) → <span class="menu">완료</span>.</li>
+      <li><span class="menu">열림</span>만 체크합니다(<span class="menu">닫힘</span>은 해제).</li>
+      <li><span class="menu">즉시 실행</span>을 고르고("실행 전 확인" 아님) <span class="menu">다음</span>.</li>
+      <li>목록에서 <span class="menu">NaviMate On (내 내비 앱)</span>을 누르면 저장됩니다.</li>
+    </ol>
+
+    <h3>C. 자동화 2 — 내비 앱이 닫힐 때</h3>
+    <ol class="steps">
+      <li>B의 1~4를 한 번 더.</li>
+      <li>이번엔 <span class="menu">닫힘</span>만 체크.</li>
+      <li><span class="menu">즉시 실행</span> &gt; <span class="menu">다음</span> &gt; <span class="menu">NaviMate Off (내 내비 앱)</span>.</li>
+    </ol>
+    <p class="note">자동화 목록에 "Google 지도이(가) 열릴 때", "Google 지도이(가) 닫힐 때" 두 줄이 생깁니다(내 내비 앱 이름으로). 목록에서 NaviMate 단축어가 안 보이면 <span class="menu">새로운 빈 자동화</span> &gt; <span class="menu">동작 추가</span> &gt; <span class="menu">NaviMate</span> 검색 &gt; <span class="menu">NaviMate 활성</span>(또는 <span class="menu">NaviMate 비활성</span>).</p>
+
+    <h3>D. 확인</h3>
+    <ol class="steps">
+      <li>내비 앱을 열었다가 NaviMate 앱으로 돌아옵니다.</li>
+      <li>설정 안내 5단계의 <span class="menu">켜기 신호</span>·<span class="menu">끄기 신호</span>가 모두 ✓로 바뀝니다.</li>
+    </ol>
+    <p class="note">내비 앱을 여러 개 쓰시나요? 메인 화면에서 다른 앱을 고르고 A~D를 한 번 더 하세요.</p>
+  </section>
+
+  <section id="ko-8">
+    <h2>8. 볼륨 노브와 차 블루투스 (권장)</h2>
+    <h3>볼륨 노브</h3>
+    <p><span class="menu">설정</span> &gt; <span class="menu">사운드 및 햅틱</span> &gt; <span class="menu">버튼으로 변경</span> 끔. 그러면 노브가 벨소리 대신 음악·내비 음성 음량을 바꿉니다.</p>
+    <h3>iPhone이 차 블루투스 오디오에 연결된다면</h3>
+    <p><span class="menu">설정</span> &gt; <span class="menu">Bluetooth</span> &gt; 차 이름 옆 ⓘ &gt; <span class="menu">기기 유형</span> &gt; <span class="menu">스피커</span>.</p>
+    <div class="why">왜 하나요: "카 스테레오"로 되어 있으면 Siri가 입력창 대신 음성으로 떠서 버튼이 명령을 입력할 수 없습니다. 그 뒤 통화가 차 스피커 대신 iPhone에서 나오면: 설정 &gt; 손쉬운 사용 &gt; 터치 &gt; 통화 오디오 라우팅 &gt; 블루투스 헤드셋.</div>
+  </section>
+
+  <section id="ko-9">
+    <h2>9. 버튼 설정</h2>
+    <p>NaviMate 버튼은 6개이고, 버튼마다 세 가지를 넣을 수 있습니다: 한 번 누르기(<em>짧게</em>), 빠르게 두 번(<em>두 번</em>), 꾹 누르기(<em>길게</em>).</p>
+    <ol class="steps">
+      <li>메인 화면에서 <span class="menu">한눈에 보는 버튼 기능</span>을 누르면 실물과 같은 배치로 6개 버튼이 보입니다(왼쪽 줄 1·2·3, 오른쪽 줄 4·5·6).</li>
+      <li>바꿀 버튼의 상자를 누르고 → 짧게/두 번/길게 중 하나 → 기능을 고릅니다.</li>
+      <li><span class="menu">전화 걸기</span>·<span class="menu">문자 보내기</span>는 연락처를 고르고(문자는 내용도) 저장합니다.</li>
+      <li>한눈에 보는 버튼 기능을 아래로 내리면 모든 기능과 한 줄 설명이 있습니다.</li>
+    </ol>
+    <p class="note">기본 배치: 버튼 1 짧게 = 전화 받기, 길게 = 통화 끊기. 버튼 2 = 전화 거절. 버튼 6 짧게 = 재생/정지, 두 번 = 다음 곡, 길게 = 이전 곡.</p>
+    <p><strong>노래 찾기(선택):</strong> Siri 언어에 맞는 단축어를 추가하고 버튼에 <span class="menu">노래 찾기</span>를 넣으세요.</p>
+    <div class="dl">
+      <a href="https://www.icloud.com/shortcuts/c365f68e55f141cebb25a3d58d1bf278" class="alt">노래 제목 (한국어 Siri)</a>
+      <a href="https://www.icloud.com/shortcuts/933fb0b65cfb422b8b7bf9ecf3ba07fb" class="alt">Song Title (영어 Siri)</a>
+    </div>
+  </section>
+
+  <section id="ko-10">
+    <h2>10. 써 보기 — 조작별 기능</h2>
+    <p>내비 앱을 열고 길 안내를 시작하세요.</p>
+    <table class="ctl" lang="ko">
+      <tr><td>조이스틱 기울이기</td><td>지도를 움직여 앞길이나 주변을 봅니다.</td></tr>
+      <tr><td>조이스틱 누르기</td><td>전체 경로 ↔ 내 위치로.</td></tr>
+      <tr><td>조이스틱 길게</td><td>어디서든 내비 앱으로 돌아옵니다.</td></tr>
+      <tr><td>노브 돌리기</td><td>지도 확대/축소. 내비 앱 밖에서는 음량.</td></tr>
+      <tr><td>노브 누르기</td><td>지금 모드(줌·음량·밝기)를 말해 줍니다. 5초 안에 한 번 더 누르면 다음 모드로.</td></tr>
+      <tr><td>노브 길게</td><td>지도 위에서: 한눈에 보는 버튼 기능. 다시 길게 = 지도로.</td></tr>
+      <tr><td>버튼 1~6</td><td>9단계에서 넣은 기능 — 전화, 문자, 메시지 읽기, 음악 등. 한 번 누르면 끝, 말할 필요도 화면 볼 필요도 없습니다.</td></tr>
+    </table>
+  </section>
+
+  <section id="ko-11">
+    <h2>11. 안 될 때</h2>
+    <ul class="steps">
+      <li><strong>조이스틱이 지도를 안 움직임.</strong> 내비 앱이 화면에 있나요? 설정 안내 5단계(둘 다 ✓)를 확인하세요. iPhone 재시동 뒤엔 세 손가락으로 화면을 두 번 탭(확대/축소).</li>
+      <li><strong>아무것도 반응 안 함.</strong> NaviMate 앱을 열어 메인 화면이 "연결됨"인지 보세요. 아니면 설정 &gt; Bluetooth 확인 후 앱을 다시 여세요.</li>
+      <li><strong>전화·문자 버튼이 안 되거나 Siri가 입력 대신 말로 뜸.</strong> Siri 입력 시험(4단계)을 다시 하고, 차 블루투스 기기 유형을 스피커로(8단계).</li>
+      <li><strong>화면이 확대됨.</strong> 세 손가락으로 두 번 탭.</li>
+      <li>앱의 <span class="menu">AI 도우미</span>·<span class="menu">의견 보내기</span>, 또는 admin@luke-technology.com.</li>
+    </ul>
+  </section>
+
+  <section id="ko-android">
+    <h2>안드로이드</h2>
+    <p>단축어·자동화가 필요 없습니다 — 내비 앱이 화면에 오면 NaviMate가 스스로 켜집니다.</p>
+    <ol class="steps">
+      <li>폰에서 쓰는 Gmail 주소를 <a href="mailto:admin@luke-technology.com?subject=NaviMate%20beta%20(Android)">admin@luke-technology.com</a>(또는 NaviMate를 전해 준 분)에게 보내 주세요. 베타 명단에 추가해 드립니다.</li>
+      <li>추가됐다는 연락을 받으면 폰에서 아래 링크 → <span class="menu">테스터 되기</span> → <span class="menu">Google Play에서 다운로드</span>.</li>
+      <li>NaviMate 앱의 설정 안내를 따라 하세요: 블루투스 허용 → NaviMate 페어링 → 접근성 서비스 켜기 → 전화·문자·알림 접근 허용 → 내비 앱 선택.</li>
+    </ol>
+    <div class="dl"><a href="https://play.google.com/apps/internaltest/4701258503670499070">NaviMate 안드로이드 앱 (Google Play 베타)</a></div>
+  </section>
+  </div>
+
+  <p class="note"><span lang="en">Need help?</span><span lang="ko">도움이 필요하세요?</span> <a href="support.html">Support</a> · admin@luke-technology.com</p>
+</main>
+<script>
+  // 링크에 #ko 또는 브라우저 언어가 한국어면 한국어로 (앱이 ?lang=ko 로 열 수 있음)
+  const ko = location.hash.startsWith('#ko') || new URLSearchParams(location.search).get('lang') === 'ko' ||
+             (!location.search.includes('lang=en') && !location.hash.startsWith('#en') && navigator.language.startsWith('ko'));
+  const set = k => { document.body.classList.toggle('ko', k);
+    document.getElementById('ko-btn').classList.toggle('on', k); document.getElementById('en-btn').classList.toggle('on', !k); };
+  set(ko);
+  document.getElementById('ko-btn').onclick = e => { e.preventDefault(); set(true); };
+  document.getElementById('en-btn').onclick = e => { e.preventDefault(); set(false); };
+</script>
+</body>
+</html>
